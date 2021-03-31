@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    font-family: $default-font;
+    font-size: $font-regular;
+}
+
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus{
+    outline: none;
+}

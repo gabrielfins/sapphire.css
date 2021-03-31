@@ -1,0 +1,39 @@
+@mixin states($color, $ripple-color: $white, $secondary-ripple-color: $primary) {
+    @include ripples($ripple-color);
+
+    &:hover {
+        background-color: lighten($color, 12);
+    }
+
+    &:focus {
+        background-color: lighten($color, 16);
+    }
+
+    &.dark-states {
+        &:hover {
+            background-color: darken($color, 12);
+        }
+    
+        &:focus {
+            background-color: darken($color, 16);
+        }
+
+        .ripple {
+            background-color: rgba($black, .16);
+        }
+    }
+
+    &.secondary, &.text {
+        &:hover {
+            background-color: rgba($color, .12);
+        }
+    
+        &:focus {
+            background-color: rgba($color, .16);
+        }
+
+        .ripple {
+            background-color: rgba($secondary-ripple-color, .16);
+        }
+    }
+}

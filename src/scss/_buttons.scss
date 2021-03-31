@@ -1,0 +1,63 @@
+@mixin default-button {
+    @include states($primary);
+    height: 44px;
+    margin: 5px;
+    padding: 0 20px;
+    border: none;
+    background-color: $primary;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: $medium-weight;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+@mixin secondary-button {
+    background: none;
+    border: 2px solid rgba($black, .12);
+    color: $primary;
+}
+
+.button {
+    @include default-button();
+    
+    &.round {
+        border-radius: 5px;
+    }
+    
+    &.pill {
+        border-radius: 22px;
+        padding: 0 30px;
+    }
+
+    &.large {
+        padding: 0 30px;
+        height: 54px;
+
+        &.pill {
+            border-radius: 47px;
+            padding: 0 40px;
+        }
+    }
+
+    &.secondary {
+        @include secondary-button();
+    }
+    
+
+    &.text {
+        @include secondary-button();
+        border: none;
+    }
+
+    &.raised {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    
+        &:active {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(36, 35, 35, .18);
+        }
+    }
+}

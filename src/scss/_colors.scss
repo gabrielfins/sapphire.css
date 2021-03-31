@@ -1,0 +1,159 @@
+$red: #cc1414;
+$orange: #db6318;
+$amber: #f0a524;
+$yellow: #e8d420;
+$green: #8ed11b;
+$olive: #16c716;
+$teal: #19d17b;
+$cyan: #1ed4b3;
+$sky: #1bc9e3;
+$blue: #197dce;
+$marine: #2745db;
+$indigo: #382cdb;
+$purple: #6c24e0;
+$violet: #862cdb;
+$lilac: #a930d9;
+$pink: #bc2bd6;
+$fuscia: #de2fa9;
+$grey: #888888;
+$black: #000000;
+$white: #ffffff;
+$primary: #8E5A32;
+
+@mixin variations($property, $color) {
+    &-lighten-1 {
+        #{$property}: lighten($color, 8) !important;
+    }
+
+    &-lighten-2 {
+        #{$property}: lighten($color, 16) !important;
+    }
+
+    &-lighten-3 {
+        #{$property}: lighten($color, 24) !important;
+    }
+
+    &-lighten-4 {
+        #{$property}: lighten($color, 32) !important;
+    }
+
+    &-lighten-5 {
+        #{$property}: lighten($color, 40) !important;
+    }
+
+    &-darken-1 {
+        #{$property}: darken($color, 8) !important;
+    }
+
+    &-darken-2 {
+        #{$property}: darken($color, 16) !important;
+    }
+
+    &-darken-3 {
+        #{$property}: darken($color, 24) !important;
+    }
+
+    &-darken-4 {
+        #{$property}: darken($color, 32) !important;
+    }
+
+    &-darken-5 {
+        #{$property}: darken($color, 40) !important;
+    }
+}
+
+@mixin define-color($color) {
+    background-color: $color !important;
+    @include variations(background-color, $color);
+
+    &-text {
+        color: $color !important;
+        @include variations(color, $color);
+    }
+}
+
+.color {
+    &.red {
+        @include define-color($red);
+    }
+}
+
+.red {
+    @include define-color($red);
+}
+
+.orange {
+    @include define-color($orange);
+}
+
+.amber {
+    @include define-color($amber);
+}
+
+.yellow {
+    @include define-color($yellow);
+}
+
+.green {
+    @include define-color($green);
+}
+
+.olive {
+    @include define-color($olive);
+}
+
+.teal {
+    @include define-color($teal);
+}
+
+.cyan {
+    @include define-color($cyan);
+}
+
+.sky {
+    @include define-color($sky);
+}
+
+.blue {
+    @include define-color($blue);
+}
+
+.marine {
+    @include define-color($marine);
+}
+
+.indigo {
+    @include define-color($indigo);
+}
+
+.purple {
+    @include define-color($purple);
+}
+
+.violet {
+    @include define-color($violet);
+}
+
+.lilac {
+    @include define-color($lilac);
+}
+
+.pink {
+    @include define-color($pink);
+}
+
+.fuscia {
+    @include define-color($fuscia);
+}
+
+.grey {
+    @include define-color($grey);
+}
+
+.black {
+    @include define-color($black);
+}
+
+.white {
+    @include define-color($white);
+}

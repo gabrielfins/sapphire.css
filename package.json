@@ -1,0 +1,33 @@
+{
+  "name": "sapphire.css",
+  "version": "1.0.0",
+  "description": "CSS library based on the Material Design's principles",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielfins/sapphire.css.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielfins/sapphire.css/issues"
+  },
+  "homepage": "https://github.com/gabrielfins/sapphire.css#readme",
+  "devDependencies": {
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "css-loader": "^5.2.0",
+    "jquery": "^3.6.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0"
+  }
+}
